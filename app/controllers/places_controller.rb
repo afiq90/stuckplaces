@@ -21,6 +21,7 @@ class PlacesController < ApplicationController
   end
 
   def edit
+    authorize! :manage, @place
   end
 
   def create
@@ -38,11 +39,13 @@ class PlacesController < ApplicationController
   end
 
   def update
+    authorize! :manage, @place
     @place.update(place_params)
     respond_with(@place)
   end
 
   def destroy
+    authorize! :manage, @place
     @place.destroy
     respond_with(@place)
   end

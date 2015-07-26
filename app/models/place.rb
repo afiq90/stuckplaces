@@ -25,4 +25,9 @@ class Place < ActiveRecord::Base
 		end
 	end
 
+	#only allowed name,address,description,phone,website,latitude,longitude,total_average_rating
+	def as_json(options={})
+		super(only: [:name, :address, :description, :phone, :website, :latitude, :longitude, :total_average_rating])
+	end
+
 end

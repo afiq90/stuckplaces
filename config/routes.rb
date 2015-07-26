@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'pages#home'
    get 'dashboard', to: 'pages#dashboard'
+   get 'jsonApi', to: 'pages#jsonApi'
+   get 'jsonApiWithoutAuthenticate', to: 'pages#jsonApiWithoutAuthenticate'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

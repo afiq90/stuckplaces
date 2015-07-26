@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'geocoder'
+gem "cancan"
 gem 'gravatarify', '~> 3.0.0'
 gem 'devise'
 gem 'simple_form'
